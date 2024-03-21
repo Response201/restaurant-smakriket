@@ -1,3 +1,6 @@
+import returant from '../assets/homePageImage.png';
+
+
 export const Home = () => {
   return (
     <>
@@ -7,7 +10,7 @@ export const Home = () => {
           <p className="homePageTitle__small">EN UNIK ORIENTALISK RESTAURANG</p>
         </section>
         <section className="container--heroImage">
-          <img className="heroImage" src="/src/assets/homePageImage.png" alt="" />
+          <img className="heroImage" src={returant} alt="" />
         </section>
       </section>
     </>
