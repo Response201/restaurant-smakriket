@@ -1,0 +1,24 @@
+.ReservationChangesDone{
+
+
+
+&___btn{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+
+}
+&___error{
+
+height: 2rem;
+position: absolute;
+bottom: clamp(30px, 5vh, 45px);
+p{
+    margin: 0;
+    padding: 0;
+}
+
+}
+
+
+}

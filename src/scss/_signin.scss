@@ -1,0 +1,154 @@
+@use 'mixins';
+@use "variables" as v;
+
+.signinContainer {
+
+    @include mixins.article() {}
+
+
+    &___backgroundImg {
+
+        object-fit: cover;
+        position: absolute;
+        z-index: -3;
+        height: 100%;
+        width: 100%;
+
+    }
+
+
+    &___overLay {
+        background: radial-gradient(circle, rgba(7, 54, 9, 0.071) 0%, rgba(0, 0, 0, 0.854) 100%);
+        position: absolute;
+        z-index: -2;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    &___overLay {
+
+        animation: Opacity 0.5s ease-in;
+    }
+
+
+
+
+    &___signin {
+
+
+        @include mixins.articleSection() {}
+
+        animation: Blur 0.5s ease-in;
+
+
+        &___form {
+
+
+            @include mixins.section() {}
+
+            justify-content: center;
+
+
+            div {
+                margin: 1.5rem 0;
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                color: black;
+                height: 3rem;
+            }
+
+
+            label {
+
+                font-size: 1.1rem;
+
+            }
+
+            input,
+            input:active,
+            input:focus,
+            input:autofill {
+                background-color: transparent !important;
+                font-family: v.$font-one;
+                font-size: clamp(12px, 1vw, 16px);
+                padding: clamp(0px, 1vw, 0.8rem) 0;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid black;
+                height: 1rem;
+            }
+
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus {
+                height: 1rem;
+                -webkit-text-fill-color: #000000;
+                border-bottom: 1px solid black;
+                font-family: v.$font-one;
+                transition: background-color 5000s ease-in-out 0s;
+
+            }
+
+            button {
+                @include mixins.button() {}
+
+                margin-top: 10%;
+            }
+
+
+            &___error {
+
+                font-size: clamp(12px, 1vw, 15px);
+                position: absolute;
+                bottom: 15px;
+                border-radius: 2px;
+                font-weight: 600;
+            }
+        }
+
+
+
+        .ReservationChangesDone {
+
+            @include mixins.section() {}
+
+            p {
+
+                font-size: clamp(18px, 2vw, 20px);
+
+            }
+
+            &___btn{
+
+                width: clamp(200px, 50vw, 250px);
+                button {
+                    @include mixins.button() {}
+                 
+                    margin-top: 10%;
+                }
+    
+
+            }
+          
+        }
+
+        .ModifyOrDeleteContainer{
+
+            @include mixins.section() {}
+
+         
+
+            button {
+                @include mixins.button() {}
+margin: 0 3.5rem;
+z-index: 10;
+            }
+
+        }
+
+
+    }
+
+}

@@ -1,0 +1,21 @@
+@use "/src/scss/navigationMenus/containersNav";
+@use "/src/scss/navigationMenus/textsAndLinksNav";
+@use "/src/scss/navigationMenus/buttonsAndIcons";
+@use "/src/scss/homePage/containersHome";
+@use "/src/scss/homePage/textsHome.scss";
+
+body {
+  margin: 0;
+  font-family: Verdana Tahoma, serif;
+  font-size: 12pt;
+  cursor: url('./assets/arrow.png');
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

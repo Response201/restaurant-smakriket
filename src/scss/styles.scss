@@ -1,0 +1,25 @@
+@use 'variables' as v;
+@use 'mixins';
+@use '_keyFrames';
+@use 'reserveTable';
+@use 'reserveForm';
+@use 'booking';
+@use 'reservationComplete';
+@use 'reservationChangesDone';
+@use 'modifyOrDelete';
+@use 'loading';
+@use 'pageNotFound';
+@use 'signin';
+
+* {
+
+    cursor: url(https://cur.cursors-4u.net/others/oth-6/oth551.cur), auto !important;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,32 @@
+@use "/src/scss/mixins";
+
+.hamburgerMenu--listLinks {
+  text-decoration: none;
+  color: white;
+  font-family: "Inter", "Helvetica", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 200;
+  letter-spacing: 0.8pt;
+}
+
+.hamburgerMenu--listLinks.active {
+  text-decoration: underline;
+}
+
+.container--navigation {
+  @include mixins.devices(desktop) {
+    .desktopMenu--listLinks {
+      text-decoration: none;
+      color: white;
+      font-family: "Inter", "Helvetica", sans-serif;
+      font-size: 1rem;
+      font-weight: 200;
+      letter-spacing: 0.5pt;
+    }
+    .desktopMenu--listLinks.active {
+      text-decoration: underline;
+    }
+  }
+
+
+}

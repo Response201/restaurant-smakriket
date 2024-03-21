@@ -1,0 +1,68 @@
+@use "/src/scss/mixins";
+
+.container--desktopMenu {
+  display: none;
+}
+
+
+.container--hamburgerMenu {
+  position: fixed;
+  height: fit-content;
+  width: 100%;
+  z-index: 1;
+  .container--menuLogo__white {
+    position: absolute;
+    .menuLogo__white {
+      width: 60%;
+    }
+  }
+  .hamburgerMenu {
+    @include mixins.flex(row, center, center, 0);
+    height: 100vh;
+    background-color: #263d26;
+    .hamburgerMenu--list {
+      @include mixins.flex(column, center, center, 25px);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.container--navigation {
+  @include mixins.devices(desktop) {
+    .container--desktopMenu {
+      display: block;
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+      .container--menuLogo__white {
+        position: absolute;
+        .menuLogo__white {
+          width: 70%;
+        }
+      }
+      .desktopMenu {
+        @include mixins.flex(row, end, center, 20px);
+        width: 100%;
+        .desktopMenu--list {
+          @include mixins.flex(row, center, center, 60px);
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          padding-top: 30px;
+          padding-right: 45px;
+        }
+      }
+    }
+    .container--hamburgerMenu {
+      display: none;
+    }
+  }
+
+  .desktopMenu--btn{
+
+    all: unset;
+
+  }
+}

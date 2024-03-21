@@ -1,0 +1,26 @@
+.ModifyOrDeleteContainer{
+
+&___header{
+
+display: flex;
+flex-direction: column;
+
+&___bold{
+
+font-weight: 600;
+text-decoration: underline;
+}
+
+p{
+    margin:0.5rem 0;
+    font-size: 1.1rem;
+}
+
+}
+&___btn{
+
+display: flex;
+margin-top: 3rem;
+
+}
+}

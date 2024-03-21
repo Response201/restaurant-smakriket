@@ -1,0 +1,19 @@
+@use "/src/scss/mixins";
+
+.hamburgerMenu--button {
+  @include mixins.flex(row, end, center, 0);
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  padding-top: 15px;
+  padding-right: 20px;
+  &:hover {
+    cursor: pointer;
+  }
+  .hamburgerMenu--icon__lines,
+  .hamburgerMenu--icon__xmark {
+    font-size: 30pt;
+    color: white;
+  }
+}

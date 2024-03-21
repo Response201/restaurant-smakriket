@@ -1,0 +1,35 @@
+@use "/src/scss/mixins";
+
+.container--homePage {
+  height: 100vh;
+  background-color: antiquewhite;
+  .container--homePageTitles {
+    @include mixins.flex(column, center, center, 2%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .container--heroImage {
+    @include mixins.flex(row, center, center, 0);
+    height: 100%;
+    overflow: hidden;
+    .heroImage {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.container--homePage {
+  @include mixins.devices(desktop) {
+    .container--heroImage {
+      @include mixins.flex(row, center, center, 0);
+      height: 100%;
+      overflow: hidden;
+      .heroImage {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

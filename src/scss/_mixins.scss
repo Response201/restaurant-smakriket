@@ -1,0 +1,102 @@
+@use "variables" as v;
+
+@mixin flex($direction, $position, $align, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $position;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin devices($breakpoint) {
+  @if $breakpoint ==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+@mixin button() {
+  width: fit-content;
+  width: -moz-fit-content;
+  height: fit-content;
+  padding: 7px 7px 7px 7px;
+  font-size: clamp(15px, 1vw, 16px);
+  background-color:v.$primary-color;
+  box-shadow: 2px 2px 1px v.$shadow;
+  border-radius: 5px;
+  color: v.$text-ligth;
+  @content;
+
+&:hover{
+background-color: v.$secondary-color;
+}
+
+}
+
+
+
+
+@mixin article() {
+  height: fit-content;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  @content;
+
+
+}
+@mixin articleSection() {
+  margin: 15px 0;
+  position: relative;
+  height: clamp(430px, 60vh, 500px);
+  min-height: fit-content;
+  min-height: -moz-fit-content;
+  width: clamp(100px, 90%, 600px);
+  background-color: rgb(251, 253, 253);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid v.$background-dark-hollow;
+  font-family: v.$font-one;
+  
+
+  @content;
+
+
+}
+
+@mixin section() {
+
+  position: relative;
+    height: 100%;
+    width: 100%;
+    background: v.$background-light;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+  @content;
+
+
+}
+
+
+
+
